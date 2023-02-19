@@ -1,0 +1,2 @@
+button.btn-secondary.active { background-color: transparent; border: none; color: var(--bs-nav-link-color); outline: none;}
+button.btn-secondary:focus { background-color: transparent;}
