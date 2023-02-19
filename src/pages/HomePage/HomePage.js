@@ -1,17 +1,19 @@
-import  React, {useEffect} from 'react'
+import  React, {useEffect, useLayoutEffect, useState} from 'react'
 import LandingLayout from '../../Layout/LandingLayout'
 
 const HomePage = () => {
+  const [num, setNum] = useState();
   useEffect(() => {
-    console.log('First');
-  }, [])
-  useEffect(() => {
-    console.log('Second');
-  }, [])
+    if(num===0)setNum(5 + Math.random() * 50)
+
+    
+  }, [num])
+ 
   return (
    <>
    <LandingLayout>
-    <h1>Home Page Body </h1>
+    <h1>{num}</h1>
+    <button onClick={()=>setNum(0)}> onClick</button>
    </LandingLayout>
    </>
   )
